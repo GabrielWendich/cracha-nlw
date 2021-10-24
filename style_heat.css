@@ -115,3 +115,16 @@ ul {
     justify-content: center;
     /* text-align é trocado por conta do display flex */
 }
+
+li {
+    clip-path: circle(42%);
+    -webkit-transition: -webkit-transform 1s;
+}
+
+#userLink > img {
+    -webkit-transition: -webkit-transform 1s;
+}
+
+li:hover, #userLink > img:hover {
+    -webkit-transform: rotate(360deg) translateZ(0);
+}
