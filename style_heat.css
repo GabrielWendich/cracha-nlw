@@ -1,0 +1,108 @@
+/* Link do Figma:
+https://www.figma.com/file/9Z2vxc8VTRuZpYjFalCMAl/Badge-Do-While2021-(Copy)?node-id=0%3A1
+ */
+
+/* Este é o seletor universal, se aplica em todos os elementos da página */
+* {
+    margin: 0;
+}
+
+
+html, body {
+    --black: hsla(240, 6%, 13%, 1);
+    --gray: hsla(240, 9%, 89%, 1);
+    /* heel - cor, saturation - saturação, lightness - luz, z-index */
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* esse webkit é uma referencia a navegadores mais modernos, e neles vai ter uma apresentação mais suave */
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: #202024;
+}
+
+main{
+    background: url(images/background.svg);
+    height: 812px;
+    width: 375px;
+}
+
+.container{
+    height: 475px;
+    max-width: 262px;
+    margin: auto auto;
+    text-align: center;
+
+    color: var(--gray);
+    
+}
+
+.avatar {
+    /* 1rem = 16px ad página - a imagem tem 160px */
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+}
+
+.avatar span {
+    /* o span é separado por espaço! */
+    position: absolute;
+    top: -15px;
+
+    z-index: 1;
+}
+
+.avatar > img {
+    /* o sinal de maior significa que vai procurar a img que está no primeiro nível */
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+    /* object-fit essa propriedade conserta a imagem em proporção */
+    
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    /* https://bennettfeely.com/clippy/ */
+
+
+}
+
+h1 {
+    font-weight: 700;
+    color: #E1E1E6;
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #E1E1E6;
+
+    margin-top: .25rem;
+
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* dispõe 1 ao lado do outro */
+    gap: .5rem;
+    /* coloca um espaço entre os elementos */
+    justify-content: center;
+    /* text-align é trocado por conta do display flex */
+}
